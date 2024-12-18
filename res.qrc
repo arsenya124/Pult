@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/power_off.png</file>
+        <file>icons/power_on.png</file>
+        <file>icons/send.png</file>
+    </qresource>
+</RCC>
