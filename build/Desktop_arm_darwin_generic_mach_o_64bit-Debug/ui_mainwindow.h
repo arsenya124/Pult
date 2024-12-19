@@ -58,36 +58,36 @@ public:
     QSpacerItem *verticalSpacer;
     QWidget *tabManual;
     QGridLayout *gridLayout;
+    QSpacerItem *verticalSpacer_2;
+    QGroupBox *groupBoxRightBottom;
+    QHBoxLayout *horizontalLayout_8;
+    QRadioButton *radioButtonRedRightBottom;
+    QRadioButton *radioButtonYellowRightBottom;
+    QRadioButton *radioButtonGreenRightBottom;
+    QGroupBox *groupBoxLeftTop;
+    QHBoxLayout *horizontalLayout_5;
+    QRadioButton *radioButtonRedLeftTop;
+    QRadioButton *radioButtonYellowLeftTop;
+    QRadioButton *radioButtonGreenLeftTop;
     QGroupBox *groupBoxLeftBottom;
     QHBoxLayout *horizontalLayout_6;
     QRadioButton *radioButtonRedLeftBottom;
     QRadioButton *radioButtonYellowLeftBottom;
     QRadioButton *radioButtonGreenLeftBottom;
     QGroupBox *groupBoxRightTop;
-    QHBoxLayout *horizontalLayout_7;
+    QGridLayout *gridLayout_2;
+    QRadioButton *radioButtonGreenRightTop;
     QRadioButton *radioButtonRedRightTop;
     QRadioButton *radioButtonYellowRightTop;
-    QRadioButton *radioButtonGreenRightTop;
-    QSpacerItem *verticalSpacer_2;
-    QGroupBox *groupBoxLeftTop;
-    QHBoxLayout *horizontalLayout_5;
-    QRadioButton *radioButtonRedLeftTop;
-    QRadioButton *radioButtonYellowLeftTop;
-    QRadioButton *radioButtonGreenLeftTop;
-    QGroupBox *groupBoxRightBottom;
-    QHBoxLayout *horizontalLayout_8;
-    QRadioButton *radioButtonRedRightBottom;
-    QRadioButton *radioButtonYellowRightBottom;
-    QRadioButton *radioButtonGreenRightBottom;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButtonPower;
     QPushButton *pushButtonSend;
     QSpacerItem *horizontalSpacer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
-    QButtonGroup *buttonGroupRightBottom;
-    QButtonGroup *buttonGroupLeftTop;
     QButtonGroup *buttonGroupLeftBottom;
+    QButtonGroup *buttonGroupLeftTop;
+    QButtonGroup *buttonGroupRightBottom;
     QButtonGroup *buttonGroupRightTop;
 
     void setupUi(QMainWindow *MainWindow)
@@ -187,7 +187,7 @@ public:
 
         horizontalLayout_4->addWidget(lineEditTimeYellow);
 
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        horizontalSpacer_5 = new QSpacerItem(807, 0, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_5);
 
@@ -206,29 +206,27 @@ public:
         tabManual->setObjectName("tabManual");
         gridLayout = new QGridLayout(tabManual);
         gridLayout->setObjectName("gridLayout");
-        groupBoxLeftBottom = new QGroupBox(tabManual);
-        groupBoxLeftBottom->setObjectName("groupBoxLeftBottom");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(groupBoxLeftBottom->sizePolicy().hasHeightForWidth());
-        groupBoxLeftBottom->setSizePolicy(sizePolicy1);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout->addItem(verticalSpacer_2, 6, 2, 1, 1);
+
+        groupBoxRightBottom = new QGroupBox(tabManual);
+        groupBoxRightBottom->setObjectName("groupBoxRightBottom");
         QFont font1;
         font1.setPointSize(12);
-        font1.setBold(false);
-        groupBoxLeftBottom->setFont(font1);
-        horizontalLayout_6 = new QHBoxLayout(groupBoxLeftBottom);
-        horizontalLayout_6->setObjectName("horizontalLayout_6");
-        radioButtonRedLeftBottom = new QRadioButton(groupBoxLeftBottom);
-        buttonGroupLeftBottom = new QButtonGroup(MainWindow);
-        buttonGroupLeftBottom->setObjectName("buttonGroupLeftBottom");
-        buttonGroupLeftBottom->addButton(radioButtonRedLeftBottom);
-        radioButtonRedLeftBottom->setObjectName("radioButtonRedLeftBottom");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(radioButtonRedLeftBottom->sizePolicy().hasHeightForWidth());
-        radioButtonRedLeftBottom->setSizePolicy(sizePolicy2);
+        groupBoxRightBottom->setFont(font1);
+        horizontalLayout_8 = new QHBoxLayout(groupBoxRightBottom);
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
+        radioButtonRedRightBottom = new QRadioButton(groupBoxRightBottom);
+        buttonGroupRightBottom = new QButtonGroup(MainWindow);
+        buttonGroupRightBottom->setObjectName("buttonGroupRightBottom");
+        buttonGroupRightBottom->addButton(radioButtonRedRightBottom);
+        radioButtonRedRightBottom->setObjectName("radioButtonRedRightBottom");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(radioButtonRedRightBottom->sizePolicy().hasHeightForWidth());
+        radioButtonRedRightBottom->setSizePolicy(sizePolicy1);
         QPalette palette;
         QBrush brush(QColor(255, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -239,10 +237,128 @@ public:
         QBrush brush2(QColor(120, 120, 120, 255));
         brush2.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonRedLeftBottom->setPalette(palette);
+        radioButtonRedRightBottom->setPalette(palette);
         QFont font2;
         font2.setPointSize(16);
         font2.setBold(true);
+        radioButtonRedRightBottom->setFont(font2);
+
+        horizontalLayout_8->addWidget(radioButtonRedRightBottom);
+
+        radioButtonYellowRightBottom = new QRadioButton(groupBoxRightBottom);
+        buttonGroupRightBottom->addButton(radioButtonYellowRightBottom);
+        radioButtonYellowRightBottom->setObjectName("radioButtonYellowRightBottom");
+        sizePolicy1.setHeightForWidth(radioButtonYellowRightBottom->sizePolicy().hasHeightForWidth());
+        radioButtonYellowRightBottom->setSizePolicy(sizePolicy1);
+        QPalette palette1;
+        QBrush brush3(QColor(223, 223, 0, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonYellowRightBottom->setPalette(palette1);
+        radioButtonYellowRightBottom->setFont(font2);
+
+        horizontalLayout_8->addWidget(radioButtonYellowRightBottom);
+
+        radioButtonGreenRightBottom = new QRadioButton(groupBoxRightBottom);
+        buttonGroupRightBottom->addButton(radioButtonGreenRightBottom);
+        radioButtonGreenRightBottom->setObjectName("radioButtonGreenRightBottom");
+        sizePolicy1.setHeightForWidth(radioButtonGreenRightBottom->sizePolicy().hasHeightForWidth());
+        radioButtonGreenRightBottom->setSizePolicy(sizePolicy1);
+        QPalette palette2;
+        QBrush brush4(QColor(0, 170, 0, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush4);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonGreenRightBottom->setPalette(palette2);
+        radioButtonGreenRightBottom->setFont(font2);
+        radioButtonGreenRightBottom->setChecked(true);
+
+        horizontalLayout_8->addWidget(radioButtonGreenRightBottom);
+
+
+        gridLayout->addWidget(groupBoxRightBottom, 5, 2, 1, 1);
+
+        groupBoxLeftTop = new QGroupBox(tabManual);
+        groupBoxLeftTop->setObjectName("groupBoxLeftTop");
+        groupBoxLeftTop->setFont(font1);
+        horizontalLayout_5 = new QHBoxLayout(groupBoxLeftTop);
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        radioButtonRedLeftTop = new QRadioButton(groupBoxLeftTop);
+        buttonGroupLeftTop = new QButtonGroup(MainWindow);
+        buttonGroupLeftTop->setObjectName("buttonGroupLeftTop");
+        buttonGroupLeftTop->addButton(radioButtonRedLeftTop);
+        radioButtonRedLeftTop->setObjectName("radioButtonRedLeftTop");
+        sizePolicy1.setHeightForWidth(radioButtonRedLeftTop->sizePolicy().hasHeightForWidth());
+        radioButtonRedLeftTop->setSizePolicy(sizePolicy1);
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonRedLeftTop->setPalette(palette3);
+        radioButtonRedLeftTop->setFont(font2);
+
+        horizontalLayout_5->addWidget(radioButtonRedLeftTop);
+
+        radioButtonYellowLeftTop = new QRadioButton(groupBoxLeftTop);
+        buttonGroupLeftTop->addButton(radioButtonYellowLeftTop);
+        radioButtonYellowLeftTop->setObjectName("radioButtonYellowLeftTop");
+        sizePolicy1.setHeightForWidth(radioButtonYellowLeftTop->sizePolicy().hasHeightForWidth());
+        radioButtonYellowLeftTop->setSizePolicy(sizePolicy1);
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonYellowLeftTop->setPalette(palette4);
+        radioButtonYellowLeftTop->setFont(font2);
+
+        horizontalLayout_5->addWidget(radioButtonYellowLeftTop);
+
+        radioButtonGreenLeftTop = new QRadioButton(groupBoxLeftTop);
+        buttonGroupLeftTop->addButton(radioButtonGreenLeftTop);
+        radioButtonGreenLeftTop->setObjectName("radioButtonGreenLeftTop");
+        sizePolicy1.setHeightForWidth(radioButtonGreenLeftTop->sizePolicy().hasHeightForWidth());
+        radioButtonGreenLeftTop->setSizePolicy(sizePolicy1);
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush4);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonGreenLeftTop->setPalette(palette5);
+        radioButtonGreenLeftTop->setFont(font2);
+        radioButtonGreenLeftTop->setChecked(true);
+
+        horizontalLayout_5->addWidget(radioButtonGreenLeftTop);
+
+
+        gridLayout->addWidget(groupBoxLeftTop, 4, 2, 1, 1);
+
+        groupBoxLeftBottom = new QGroupBox(tabManual);
+        groupBoxLeftBottom->setObjectName("groupBoxLeftBottom");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(groupBoxLeftBottom->sizePolicy().hasHeightForWidth());
+        groupBoxLeftBottom->setSizePolicy(sizePolicy2);
+        QFont font3;
+        font3.setPointSize(12);
+        font3.setBold(false);
+        groupBoxLeftBottom->setFont(font3);
+        horizontalLayout_6 = new QHBoxLayout(groupBoxLeftBottom);
+        horizontalLayout_6->setObjectName("horizontalLayout_6");
+        radioButtonRedLeftBottom = new QRadioButton(groupBoxLeftBottom);
+        buttonGroupLeftBottom = new QButtonGroup(MainWindow);
+        buttonGroupLeftBottom->setObjectName("buttonGroupLeftBottom");
+        buttonGroupLeftBottom->addButton(radioButtonRedLeftBottom);
+        radioButtonRedLeftBottom->setObjectName("radioButtonRedLeftBottom");
+        sizePolicy1.setHeightForWidth(radioButtonRedLeftBottom->sizePolicy().hasHeightForWidth());
+        radioButtonRedLeftBottom->setSizePolicy(sizePolicy1);
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonRedLeftBottom->setPalette(palette6);
         radioButtonRedLeftBottom->setFont(font2);
         radioButtonRedLeftBottom->setChecked(true);
 
@@ -251,15 +367,13 @@ public:
         radioButtonYellowLeftBottom = new QRadioButton(groupBoxLeftBottom);
         buttonGroupLeftBottom->addButton(radioButtonYellowLeftBottom);
         radioButtonYellowLeftBottom->setObjectName("radioButtonYellowLeftBottom");
-        sizePolicy2.setHeightForWidth(radioButtonYellowLeftBottom->sizePolicy().hasHeightForWidth());
-        radioButtonYellowLeftBottom->setSizePolicy(sizePolicy2);
-        QPalette palette1;
-        QBrush brush3(QColor(223, 223, 0, 255));
-        brush3.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush3);
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonYellowLeftBottom->setPalette(palette1);
+        sizePolicy1.setHeightForWidth(radioButtonYellowLeftBottom->sizePolicy().hasHeightForWidth());
+        radioButtonYellowLeftBottom->setSizePolicy(sizePolicy1);
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonYellowLeftBottom->setPalette(palette7);
         radioButtonYellowLeftBottom->setFont(font2);
 
         horizontalLayout_6->addWidget(radioButtonYellowLeftBottom);
@@ -267,13 +381,11 @@ public:
         radioButtonGreenLeftBottom = new QRadioButton(groupBoxLeftBottom);
         buttonGroupLeftBottom->addButton(radioButtonGreenLeftBottom);
         radioButtonGreenLeftBottom->setObjectName("radioButtonGreenLeftBottom");
-        QPalette palette2;
-        QBrush brush4(QColor(0, 170, 0, 255));
-        brush4.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonGreenLeftBottom->setPalette(palette2);
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush4);
+        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonGreenLeftBottom->setPalette(palette8);
         radioButtonGreenLeftBottom->setFont(font2);
 
         horizontalLayout_6->addWidget(radioButtonGreenLeftBottom);
@@ -283,168 +395,57 @@ public:
 
         groupBoxRightTop = new QGroupBox(tabManual);
         groupBoxRightTop->setObjectName("groupBoxRightTop");
-        QFont font3;
-        font3.setPointSize(12);
-        groupBoxRightTop->setFont(font3);
-        horizontalLayout_7 = new QHBoxLayout(groupBoxRightTop);
-        horizontalLayout_7->setObjectName("horizontalLayout_7");
-        radioButtonRedRightTop = new QRadioButton(groupBoxRightTop);
+        groupBoxRightTop->setFont(font1);
+        groupBoxRightTop->setAlignment(Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignTop);
+        gridLayout_2 = new QGridLayout(groupBoxRightTop);
+        gridLayout_2->setObjectName("gridLayout_2");
+        radioButtonGreenRightTop = new QRadioButton(groupBoxRightTop);
         buttonGroupRightTop = new QButtonGroup(MainWindow);
         buttonGroupRightTop->setObjectName("buttonGroupRightTop");
+        buttonGroupRightTop->addButton(radioButtonGreenRightTop);
+        radioButtonGreenRightTop->setObjectName("radioButtonGreenRightTop");
+        sizePolicy1.setHeightForWidth(radioButtonGreenRightTop->sizePolicy().hasHeightForWidth());
+        radioButtonGreenRightTop->setSizePolicy(sizePolicy1);
+        QPalette palette9;
+        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush4);
+        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonGreenRightTop->setPalette(palette9);
+        radioButtonGreenRightTop->setFont(font2);
+
+        gridLayout_2->addWidget(radioButtonGreenRightTop, 0, 2, 1, 1);
+
+        radioButtonRedRightTop = new QRadioButton(groupBoxRightTop);
         buttonGroupRightTop->addButton(radioButtonRedRightTop);
         radioButtonRedRightTop->setObjectName("radioButtonRedRightTop");
-        sizePolicy2.setHeightForWidth(radioButtonRedRightTop->sizePolicy().hasHeightForWidth());
-        radioButtonRedRightTop->setSizePolicy(sizePolicy2);
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonRedRightTop->setPalette(palette3);
+        sizePolicy1.setHeightForWidth(radioButtonRedRightTop->sizePolicy().hasHeightForWidth());
+        radioButtonRedRightTop->setSizePolicy(sizePolicy1);
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonRedRightTop->setPalette(palette10);
         radioButtonRedRightTop->setFont(font2);
         radioButtonRedRightTop->setChecked(true);
 
-        horizontalLayout_7->addWidget(radioButtonRedRightTop);
+        gridLayout_2->addWidget(radioButtonRedRightTop, 0, 0, 1, 1);
 
         radioButtonYellowRightTop = new QRadioButton(groupBoxRightTop);
         buttonGroupRightTop->addButton(radioButtonYellowRightTop);
         radioButtonYellowRightTop->setObjectName("radioButtonYellowRightTop");
-        sizePolicy2.setHeightForWidth(radioButtonYellowRightTop->sizePolicy().hasHeightForWidth());
-        radioButtonYellowRightTop->setSizePolicy(sizePolicy2);
-        QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush3);
-        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonYellowRightTop->setPalette(palette4);
+        sizePolicy1.setHeightForWidth(radioButtonYellowRightTop->sizePolicy().hasHeightForWidth());
+        radioButtonYellowRightTop->setSizePolicy(sizePolicy1);
+        QPalette palette11;
+        palette11.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        radioButtonYellowRightTop->setPalette(palette11);
         radioButtonYellowRightTop->setFont(font2);
 
-        horizontalLayout_7->addWidget(radioButtonYellowRightTop);
-
-        radioButtonGreenRightTop = new QRadioButton(groupBoxRightTop);
-        buttonGroupRightTop->addButton(radioButtonGreenRightTop);
-        radioButtonGreenRightTop->setObjectName("radioButtonGreenRightTop");
-        sizePolicy2.setHeightForWidth(radioButtonGreenRightTop->sizePolicy().hasHeightForWidth());
-        radioButtonGreenRightTop->setSizePolicy(sizePolicy2);
-        QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonGreenRightTop->setPalette(palette5);
-        radioButtonGreenRightTop->setFont(font2);
-
-        horizontalLayout_7->addWidget(radioButtonGreenRightTop);
+        gridLayout_2->addWidget(radioButtonYellowRightTop, 0, 1, 1, 1);
 
 
         gridLayout->addWidget(groupBoxRightTop, 0, 2, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_2, 6, 2, 1, 1);
-
-        groupBoxLeftTop = new QGroupBox(tabManual);
-        groupBoxLeftTop->setObjectName("groupBoxLeftTop");
-        groupBoxLeftTop->setFont(font3);
-        horizontalLayout_5 = new QHBoxLayout(groupBoxLeftTop);
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        radioButtonRedLeftTop = new QRadioButton(groupBoxLeftTop);
-        buttonGroupLeftTop = new QButtonGroup(MainWindow);
-        buttonGroupLeftTop->setObjectName("buttonGroupLeftTop");
-        buttonGroupLeftTop->addButton(radioButtonRedLeftTop);
-        radioButtonRedLeftTop->setObjectName("radioButtonRedLeftTop");
-        sizePolicy2.setHeightForWidth(radioButtonRedLeftTop->sizePolicy().hasHeightForWidth());
-        radioButtonRedLeftTop->setSizePolicy(sizePolicy2);
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonRedLeftTop->setPalette(palette6);
-        radioButtonRedLeftTop->setFont(font2);
-
-        horizontalLayout_5->addWidget(radioButtonRedLeftTop);
-
-        radioButtonYellowLeftTop = new QRadioButton(groupBoxLeftTop);
-        buttonGroupLeftTop->addButton(radioButtonYellowLeftTop);
-        radioButtonYellowLeftTop->setObjectName("radioButtonYellowLeftTop");
-        sizePolicy2.setHeightForWidth(radioButtonYellowLeftTop->sizePolicy().hasHeightForWidth());
-        radioButtonYellowLeftTop->setSizePolicy(sizePolicy2);
-        QPalette palette7;
-        palette7.setBrush(QPalette::Active, QPalette::WindowText, brush3);
-        palette7.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette7.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonYellowLeftTop->setPalette(palette7);
-        radioButtonYellowLeftTop->setFont(font2);
-
-        horizontalLayout_5->addWidget(radioButtonYellowLeftTop);
-
-        radioButtonGreenLeftTop = new QRadioButton(groupBoxLeftTop);
-        buttonGroupLeftTop->addButton(radioButtonGreenLeftTop);
-        radioButtonGreenLeftTop->setObjectName("radioButtonGreenLeftTop");
-        sizePolicy2.setHeightForWidth(radioButtonGreenLeftTop->sizePolicy().hasHeightForWidth());
-        radioButtonGreenLeftTop->setSizePolicy(sizePolicy2);
-        QPalette palette8;
-        palette8.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonGreenLeftTop->setPalette(palette8);
-        radioButtonGreenLeftTop->setFont(font2);
-        radioButtonGreenLeftTop->setChecked(true);
-
-        horizontalLayout_5->addWidget(radioButtonGreenLeftTop);
-
-
-        gridLayout->addWidget(groupBoxLeftTop, 4, 2, 1, 1);
-
-        groupBoxRightBottom = new QGroupBox(tabManual);
-        groupBoxRightBottom->setObjectName("groupBoxRightBottom");
-        groupBoxRightBottom->setFont(font3);
-        horizontalLayout_8 = new QHBoxLayout(groupBoxRightBottom);
-        horizontalLayout_8->setObjectName("horizontalLayout_8");
-        radioButtonRedRightBottom = new QRadioButton(groupBoxRightBottom);
-        buttonGroupRightBottom = new QButtonGroup(MainWindow);
-        buttonGroupRightBottom->setObjectName("buttonGroupRightBottom");
-        buttonGroupRightBottom->addButton(radioButtonRedRightBottom);
-        radioButtonRedRightBottom->setObjectName("radioButtonRedRightBottom");
-        sizePolicy2.setHeightForWidth(radioButtonRedRightBottom->sizePolicy().hasHeightForWidth());
-        radioButtonRedRightBottom->setSizePolicy(sizePolicy2);
-        QPalette palette9;
-        palette9.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette9.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette9.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonRedRightBottom->setPalette(palette9);
-        radioButtonRedRightBottom->setFont(font2);
-
-        horizontalLayout_8->addWidget(radioButtonRedRightBottom);
-
-        radioButtonYellowRightBottom = new QRadioButton(groupBoxRightBottom);
-        buttonGroupRightBottom->addButton(radioButtonYellowRightBottom);
-        radioButtonYellowRightBottom->setObjectName("radioButtonYellowRightBottom");
-        sizePolicy2.setHeightForWidth(radioButtonYellowRightBottom->sizePolicy().hasHeightForWidth());
-        radioButtonYellowRightBottom->setSizePolicy(sizePolicy2);
-        QPalette palette10;
-        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush3);
-        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonYellowRightBottom->setPalette(palette10);
-        radioButtonYellowRightBottom->setFont(font2);
-
-        horizontalLayout_8->addWidget(radioButtonYellowRightBottom);
-
-        radioButtonGreenRightBottom = new QRadioButton(groupBoxRightBottom);
-        buttonGroupRightBottom->addButton(radioButtonGreenRightBottom);
-        radioButtonGreenRightBottom->setObjectName("radioButtonGreenRightBottom");
-        sizePolicy2.setHeightForWidth(radioButtonGreenRightBottom->sizePolicy().hasHeightForWidth());
-        radioButtonGreenRightBottom->setSizePolicy(sizePolicy2);
-        QPalette palette11;
-        palette11.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
-        palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        radioButtonGreenRightBottom->setPalette(palette11);
-        radioButtonGreenRightBottom->setFont(font2);
-        radioButtonGreenRightBottom->setChecked(true);
-
-        horizontalLayout_8->addWidget(radioButtonGreenRightBottom);
-
-
-        gridLayout->addWidget(groupBoxRightBottom, 5, 2, 1, 1);
 
         tabWidgetModes->addTab(tabManual, QString());
 
@@ -503,7 +504,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidgetModes->setCurrentIndex(2);
+        tabWidgetModes->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -517,22 +518,22 @@ public:
         labelTimeRed->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#000000;\">\320\222\321\200\320\265\320\274\321\217 \320\272\321\200\320\260\321\201\320\275\320\276\320\263\320\276 \321\206\320\262\320\265\321\202\320\260:</span></p></body></html>", nullptr));
         labelTimeYellow->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" color:#000000;\">\320\222\321\200\320\265\320\274\321\217 \320\266\321\221\320\273\321\202\320\276\320\263\320\276 \321\206\320\262\320\265\321\202\320\260:</span></p></body></html>", nullptr));
         tabWidgetModes->setTabText(tabWidgetModes->indexOf(tabAuto), QCoreApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \320\260\320\262\321\202\320\276\320\274\320\260\321\202\320\270\321\207\320\265\321\201\320\272\320\276\320\265", nullptr));
+        groupBoxRightBottom->setTitle(QCoreApplication::translate("MainWindow", "\320\237\321\200\320\260\320\262\321\213\320\271 \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
+        radioButtonRedRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
+        radioButtonYellowRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
+        radioButtonGreenRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
+        groupBoxLeftTop->setTitle(QCoreApplication::translate("MainWindow", "\320\233\320\265\320\262\321\213\320\271  \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
+        radioButtonRedLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
+        radioButtonYellowLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
+        radioButtonGreenLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
         groupBoxLeftBottom->setTitle(QCoreApplication::translate("MainWindow", "\320\235\320\270\320\266\320\275\320\270\320\271 \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
         radioButtonRedLeftBottom->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
         radioButtonYellowLeftBottom->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
         radioButtonGreenLeftBottom->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
         groupBoxRightTop->setTitle(QCoreApplication::translate("MainWindow", "\320\222\320\265\321\200\321\205\320\275\320\270\320\271 \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
+        radioButtonGreenRightTop->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
         radioButtonRedRightTop->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
         radioButtonYellowRightTop->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
-        radioButtonGreenRightTop->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
-        groupBoxLeftTop->setTitle(QCoreApplication::translate("MainWindow", "\320\233\320\265\320\262\321\213\320\271  \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
-        radioButtonRedLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
-        radioButtonYellowLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
-        radioButtonGreenLeftTop->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
-        groupBoxRightBottom->setTitle(QCoreApplication::translate("MainWindow", "\320\237\321\200\320\260\320\262\321\213\320\271 \321\201\320\262\320\265\321\202\320\276\321\204\320\276\321\200", nullptr));
-        radioButtonRedRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\232\321\200\320\260\321\201\320\275\321\213\320\271", nullptr));
-        radioButtonYellowRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\226\321\221\320\273\321\202\321\213\320\271", nullptr));
-        radioButtonGreenRightBottom->setText(QCoreApplication::translate("MainWindow", "\320\227\320\265\320\273\321\221\320\275\321\213\320\271", nullptr));
         tabWidgetModes->setTabText(tabWidgetModes->indexOf(tabManual), QCoreApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \321\200\321\203\321\207\320\275\320\276\320\265", nullptr));
 #if QT_CONFIG(tooltip)
         pushButtonPower->setToolTip(QCoreApplication::translate("MainWindow", "\320\232\320\275\320\276\320\277\320\272\320\260 \320\277\320\270\321\202\320\260\320\275\320\270\321\217", nullptr));
